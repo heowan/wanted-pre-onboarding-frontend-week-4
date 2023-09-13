@@ -1,46 +1,105 @@
-# Getting Started with Create React App
+# 원티드 프리온보딩 프론트엔드 12차 4주차 과제 - 개인
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📚 과제
 
-## Available Scripts
+주어진 데이터를 기반으로 시계열 차트 만들기
 
-In the project directory, you can run:
+## 🚀 실행 방법 및 프리뷰
 
-### `npm start`
+```bash
+$ npm install
+$ npm start
+```
+### 구현 기능
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [x] 시계열 차트 만들기
+  - [x] 주어진 JSON 데이터의 `key`값(시간)을 기반으로 시계열 차트 구현
+- [x] 호버 기능 구현
+    - [x] 특정 데이터 구역에 마우스 호버시 `id, value_area, value_bar` 데이터를 툴팁 형태로 제공
+- [x] 필터링 기능 구현
+    - [x] 필터링 시 버튼에서 선택한 ID값과 동일한 ID값을 가진 데이터 구역만 하이라이트 처리
+    - [ ] 특정 데이터 구역 클릭 시 필터링 기능과 동일한 형태로 동일한 ID값을 가진 데이터 구역 하이라이트 처리
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  
+### 배포 링크
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🔗 [배포 링크](https://kaleidoscopic-blancmange-cad160.netlify.app/)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 구현 영상
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+|            구현 영상          |
+| :------------------------------: |
+| <img width="800" alt="issueList_gif" src="https://github.com/heowan/wanted-pre-onboarding-frontend-week-4/assets/101536766/4fb91ab1-e8e8-46a3-839f-09bcf2d1947c" />|
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## 📁 디렉토리 구조
+```
+📦 src
+ ┣ 📂 components
+ ┃ ┣ 📂 chart
+ ┃ ┃ ┣ 📜 Chart.style.tsx
+ ┃ ┃ ┗ 📜 Chart.tsx
+ ┃ ┗ 📂 filter
+ ┃   ┣ 📜 filter.style.tsx
+ ┃   ┗ 📜 filter.tsx
+ ┣ 📂 constants
+ ┃ ┗ 📜 constants.ts
+ ┣ 📂 httpClient
+ ┃ ┗ 📜 httpClient.ts
+ ┣ 📜 App.tsx
+ ┣ 📜 index.css
+ ┣ 📜 index.tsx
+ ┗ 📜 react-app-env.d.ts
+ ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## ✅ 컨벤션
+### 브랜치 형식
+    
+    main
+    |_dev
+    	|_feat/a
+    	|_feat/b
+    	|_feat/c
+    
+### 커밋 메세지
+- 💬
+    
+    | 종류  | 의미 |
+    | --- | --- |
+    | feat | 새로운 기능을 추가할 경우 |
+    | fix | 버그를 고친 경우 |
+    | docs | 문서를 수정한 경우 |
+    | style | 코드 포맷 변경, 세미 콜론 누락, 코드 수정이 없는 경우 |
+    | refactor | 프로덕션 코드 리팩토링 |
+    | chore | 기타 변경사항 |
+    | test | test 관련한 코드의 추가, 수정한 경우 |
+    | design | CSS 등 사용자 UI 디자인 변경 |
+    | comment | 필요한 주석 추가 및 변경 |
+    | rename | 파일 혹은 폴더명을 수정하거나 옮기는 작업만인 경우 |
+    | remove | 파일을 삭제하는 작업만 수행한 경우 |
+    | !HOTFIX | 급하게 치명적인 버그를 고쳐야하는 경우 |
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 기술스택 
 
-## Learn More
+### Environment
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white"> <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/visual Studio code-007ACC?style=for-the-badge&logo=VisualStudioCode&logoColor=white"> 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Config
+
+<img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"> <img src="https://img.shields.io/badge/eslint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white"> <img src="https://img.shields.io/badge/prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=white"> <img src="https://img.shields.io/badge/husky-FF4088?style=for-the-badge&logo=hugo&logoColor=white">
+
+### Development
+
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white"> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white"> <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white">
+
+### Library
+<img src="https://img.shields.io/badge/chart.js-FF6384?style=for-the-badge&logo=chart.js&logoColor=white"> 
+
+### Deploy
+
+<img src="https://img.shields.io/badge/netlify-00C7B7?style=for-the-badge&logo=Netlify&logoColor=white"> 
