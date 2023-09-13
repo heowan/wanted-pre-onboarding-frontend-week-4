@@ -8,7 +8,7 @@ function App() {
 	return (
 		<div>
 			<Filters activeTab={activeTab} setActiveTab={setActiveTab} />
-			<ChartDiv activeTab={activeTab} />
+			<ChartDiv activeTab={activeTab} setActiveTab={setActiveTab} />
 		</div>
 	);
 }
