@@ -1,6 +1,6 @@
-import ChartDiv from './component/chart/Chart';
+import ChartDiv from './components/chart/Chart';
 import { useState } from 'react';
-import Filters from './component/filter/filter';
+import Filters from './components/filter/filter';
 
 function App() {
 	const [activeTab, setActiveTab] = useState<string>('');
