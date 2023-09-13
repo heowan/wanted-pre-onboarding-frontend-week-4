@@ -29,7 +29,7 @@ ChartJS.register(
 	Filler,
 );
 
-function ChartDiv() {
+function ChartDiv({ activeTab }: { activeTab: string }) {
 	const [responseData, setResponseData] = useState<
 		Record<string, { id: string; value_area: number; value_bar: number }>
 	>({});
@@ -45,14 +45,22 @@ function ChartDiv() {
 			value_bar: item.value_bar,
 		};
 	});
-
 	const data = {
 		labels,
 		datasets: [
 			{
 				type: 'bar' as const,
 				label: 'value_bar',
-				backgroundColor: 'rgb(171, 207, 251)',
+				backgroundColor: (context: any) => {
+					const dataIndex = context.dataIndex;
+					const valueId = mappedData[dataIndex].id;
+
+					if (activeTab === valueId) {
+						return 'rgb(0, 95, 211)';
+					} else {
+						return 'rgb(171, 207, 251)';
+					}
+				},
 				hoverBackgroundColor: 'rgb(0, 95, 211)',
 				data: mappedData.map(item => item.value_bar),
 				borderColor: 'white',
