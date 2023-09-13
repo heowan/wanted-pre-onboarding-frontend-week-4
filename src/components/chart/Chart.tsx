@@ -29,7 +29,13 @@ ChartJS.register(
 	Filler,
 );
 
-function ChartDiv({ activeTab }: { activeTab: string }) {
+function ChartDiv({
+	activeTab,
+	setActiveTab,
+}: {
+	activeTab: string;
+	setActiveTab: (activeTab: string) => void;
+}) {
 	const [responseData, setResponseData] = useState<
 		Record<string, { id: string; value_area: number; value_bar: number }>
 	>({});
@@ -132,6 +138,9 @@ function ChartDiv({ activeTab }: { activeTab: string }) {
 					},
 				},
 			},
+		},
+		onClick: (event: any, elements: any) => {
+			setActiveTab(mappedData[elements[0].index].id);
 		},
 	};
 
